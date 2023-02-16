@@ -11,7 +11,7 @@ int main(void)
 	char char_ = 'R';
 	int int_ = 42;
 	long int longint_ = 45672354;
-	long long int longlong_ =8746133;
+	long long int longlong_ = 8746133;
 	float float_ = 0.56;
 	int char_size = sizeof(char_);
 	int int_size = sizeof(int_);

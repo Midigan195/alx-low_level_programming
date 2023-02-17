@@ -4,3 +4,4 @@
 3- print lowercase and uppercase alpahbet
 4- Alphabet exept q and e
 5 - Print 0 - 9
+6-Print 0 to 9 using putchar 

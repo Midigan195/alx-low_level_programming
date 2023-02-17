@@ -6,3 +6,4 @@
 5 - Print 0 - 9
 6-Print 0 to 9 using putchar 
 7 - Print alphbet reversed
+8- Print all base16

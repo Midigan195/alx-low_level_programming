@@ -2,13 +2,13 @@
 #include <time.h>
 #include <stdio.h>
 /**
- *main
+ *int main(void) - return true if sucessful
  *
  *return test if n is posiyive
  *return text if n is negative
  *return text if n is zero
  *
- *return 0 
+ *return - 0 
 */
 int main(void)
 {

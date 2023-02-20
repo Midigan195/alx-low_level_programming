@@ -1,14 +1,13 @@
 #include<stdio.h>
 
 /**
-*
-*
-*
-*
+ * main - runs program
+ *
+ * Return: 0 if sucessful
 */
 int main(void)
 {
-	char i = 48;
+	int i = 48;
 
 	while (i < 58)
 	{

@@ -1,9 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
-
-/* betty style doc for function main goes there */
+/**
+ * main - run program
+ *
+ * Return: 0 if succesful
+*/
 int main(void)
 {
 	int n;
@@ -17,7 +19,7 @@ int main(void)
 	if (last_digit > 5)
 		printf(" and is greater than 5\n");
 	else if (last_digit < 6 && last_digit != 0)
-		printf(" and  is less than 6 and not 0\n");
+		printf(" and is less than 6 and not 0\n");
 	else
 		printf(" and is 0\n");
 	return (0);

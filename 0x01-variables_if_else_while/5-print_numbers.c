@@ -1,10 +1,9 @@
 #include<stdio.h>
 
 /**
-*
-*
-*
-*
+ * main - run program
+ *
+ * Return: 0 if sucessful
 */
 int main(void)
 {
@@ -12,7 +11,7 @@ int main(void)
 
 	while (i < 10)
 	{
-		printf("%d",i);
+		printf("%d", i);
 		i++;
 	}
 	putchar('\n');

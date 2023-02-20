@@ -1,10 +1,9 @@
 #include<stdio.h>
 
 /**
-*
-*
-*
-*
+ * main - runs program
+ * 
+ * Return: 0 if sucessful
 */
 int main(void)
 {

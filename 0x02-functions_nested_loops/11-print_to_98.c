@@ -2,7 +2,7 @@
 #include<stdio.h>
 
 /**
- * _print_to_98 - checks wether value is lowercase
+ * print_to_98 - checks wether value is lowercase
  * @n: input parameter
  * Return: 0 if sucessful
 */

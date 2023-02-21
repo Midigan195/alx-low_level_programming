@@ -1,7 +1,7 @@
 #include"main.h"
 
 /**
- * times_table - prints alphabet from a
+ * times_table - prints times tables from 0;
  *
  * Return: 0 if sucessful
 */
@@ -18,16 +18,19 @@ void times_table(void)
 		while (j < 9)
 		{
 			val = i * j;
-			_putchar(',');
-			if ((val / 10) >= 1)				
+			if ((val / 10) >= 1)
 			{
 				_putchar(num[(val - (val % 10)) / 10]);
 				_putchar(num[val % 10]);
+				if (j < 8)
+					_putchar(',');
 				_putchar(' ');
 			}
 			else
 			{
 				_putchar(num[val]);
+				if (j < 8)
+					_putchar(',');
 				_putchar(' ');
 				_putchar(' ');
 			}

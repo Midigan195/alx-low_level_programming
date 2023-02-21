@@ -1,16 +1,16 @@
 #include"main.h"
 
 /**
- * print_alphabet - prints alphabet from a
+ * jack_bauer - prints every minute of a day
  *
  * Return: 0 if sucessful
 */
 void jack_bauer(void)
 {
-	char hour_1[] = {'0','1','2'};
-	char hour_2[] = {'0','1','2','3'};
-	char min_1[] = {'0','1','2','3','4','5'};
-	char min_2[] = {'0','1','2','3','4','5','6','7','8','9'};
+	char hour_1[] = {'0', '1', '2'};
+	char hour_2[] = {'0', '1', '2', '3'};
+	char min_1[] = {'0', '1', '2', '3', '4', '5'};
+	char min_2[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9'};
 	int i = 0;
 	int j = 0;
 	int k = 0;

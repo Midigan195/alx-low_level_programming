@@ -1,6 +1,6 @@
 #include"main.h"
 /**
- * print_lines - Prints line of a certain size
+ * print_line - Prints line of a certain size
  * @n: number of lines
  * Return: 0 always sucessful
 */

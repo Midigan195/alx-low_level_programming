@@ -1,6 +1,6 @@
 #include"main.h"
 /**
- * print_numbers - Checks if letter is uppercase
+ * print_most_numbers - Checks if letter is uppercase
  * Return: 0 always sucessful
 */
 

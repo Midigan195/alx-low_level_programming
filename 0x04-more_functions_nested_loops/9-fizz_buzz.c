@@ -1,6 +1,6 @@
 #include<stdio.h>
 /**
- * print_numbers - Checks if letter is uppercase
+ * main - Checks if letter is uppercase
  * Return: 0 always sucessful
 */
 
@@ -24,6 +24,6 @@ int main(void)
 		i++;
 	}
 	putchar('\n');
-	
+
 	return (0);
 }

@@ -17,7 +17,7 @@ void rev_string(char *s)
 	}
 	j--;
 
-	while ((j - i) != 1 && (j - i) != 2)
+	while (!((j - i) <= 1))
 	{
 		temp = *(s + j);
 		*(s + j) = *(s + i);

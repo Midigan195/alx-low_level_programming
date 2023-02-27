@@ -1,8 +1,8 @@
 #include"main.h"
 /**
- * _print_array - prints string
+ * print_array - prints string
  * @a: takes array pointer
- * @b: takes array length
+ * @n: takes array length
  * Return: nothing
 */
 

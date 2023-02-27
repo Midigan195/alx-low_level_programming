@@ -1,4 +1,5 @@
 #include"main.h"
+#include<stdio.h>
 /**
  * print_array - prints string
  * @a: takes array pointer
@@ -12,8 +13,13 @@ void print_array(int *a, int n)
 
 	while (i < n)
 	{
-		_putchar(*(a + i));
+		if (!(i == (n - 1)))
+		{
+			printf("%d, ", *(a + i));
+		}
+		else
+			printf("%d", *(a + i));
 		i++;
 	}
-	_putchar('\n');
+	printf("\n");
 }

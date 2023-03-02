@@ -16,7 +16,7 @@ int _strcmp(char *s1, char *s2)
 		val = *(s1 + k) - *(s2 + k);
 
 		if (val == 0)
-			k++
+			k++;
 		else
 			break;
 	}

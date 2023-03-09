@@ -4,8 +4,19 @@
  * @n: pointer to string;
  * Return: total factorial
 */
+int i = 1;
 
 int _sqrt_recursion(int n)
 {
-	return (_find_root(n, 1));
+	if ((i * i) > n)
+	{
+		i = 0;
+		return (-1);
+	}
+	if ((i * i) == n)
+	{
+		return (i);
+	}
+	i++;
+	return (_sqrt_recursion(n));
 }

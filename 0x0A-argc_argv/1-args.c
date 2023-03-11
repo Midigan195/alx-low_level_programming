@@ -2,12 +2,16 @@
 #include<stdio.h>
 /**
  * main - returns name of executable
- * @argv: array of srguments
+ * @argc: array of srguments
+ * @argv: array of arguments
  * Return: (0) always success
 */
 
-int main (int argc ,char *argv[])
+int main(int argc, char *argv[])
 {
-	printf("%d\n", (argc - 1));
+	int i = argv[0] - argv[0];
+
+	printf("%d\n", (argc - 1) + i);
 	return (0);
+
 }

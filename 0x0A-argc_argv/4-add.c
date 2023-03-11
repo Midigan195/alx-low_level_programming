@@ -4,11 +4,12 @@
 #include<ctype.h>
 /**
  * main - returns name of executable
- * @argv: array of srguments
+ * @argv: array of srgumentsi
+ * @argc: number of argumets
  * Return: (0) always success
 */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i = 1;
@@ -26,7 +27,7 @@ int main (int argc, char *argv[])
 			{
 				printf("Error\n");
 				return (1);
-			}	
+			}
 			sum = sum + atoi(argv[i]);
 			i++;
 		}

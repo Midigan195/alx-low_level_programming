@@ -4,15 +4,16 @@
 /**
  * main - returns name of executable
  * @argv: array of srguments
+ * @argc: number of arguments
  * Return: (0) always success
 */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int a = 0;
 	int b = 0;
 
-	if (argc > 3 || argc == 1)
+	if (argc != 3)
 	{
 		printf("Error\n");
 		return (1);
@@ -20,7 +21,7 @@ int main (int argc, char *argv[])
 	else
 	{
 		a = atoi(argv[1]);
-		b = atoi(argv[2]);	
+		b = atoi(argv[2]);
 		printf("%d\n", a * b);
 	}
 	return (0);

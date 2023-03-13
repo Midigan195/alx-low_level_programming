@@ -19,10 +19,10 @@ char *_strdup(char *str)
 		i++;
 	i++;
 
-	arr = malloc(sizeof(char) * i );
+	arr = malloc(sizeof(char) * i);
 	if (arr == NULL)
 		return (NULL);
-	
+
 	while (j < i)
 	{
 		arr[j] = *(str + j);

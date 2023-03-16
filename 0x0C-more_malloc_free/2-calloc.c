@@ -14,11 +14,14 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	int i = 0;
 	int el = nmemb;
 
-	if (nmemb == 0 || size == 0)
+	if (nmemb <= 0 || size <= 0)
 		return (NULL);
 	p = malloc(space);
 	if (p == NULL)
+	{
+		free(p);
 		return (NULL);
+	}
 	while (i < el)
 	{
 		p[i] = 0;

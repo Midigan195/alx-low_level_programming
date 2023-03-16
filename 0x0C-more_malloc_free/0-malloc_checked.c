@@ -1,6 +1,5 @@
 #include"main.h"
 #include<stdlib.h>
-#include<stdio.h>
 /**
  * malloc_checked - returns exit status if malloc fails
  * @b: number of bytes

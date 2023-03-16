@@ -1,6 +1,5 @@
 #include"main.h"
 #include<stdlib.h>
-#include<stdio.h>
 /**
  * string_nconcat - returns exit status if malloc fails
  * @s1: number of bytes of string 1

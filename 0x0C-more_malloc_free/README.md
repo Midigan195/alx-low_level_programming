@@ -1,0 +1,1 @@
+malloc with exit status

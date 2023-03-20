@@ -1,1 +1,1 @@
-This is for all the c fundementals
+0-make macro

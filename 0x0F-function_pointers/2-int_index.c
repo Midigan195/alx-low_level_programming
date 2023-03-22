@@ -1,9 +1,10 @@
 #include"function_pointers.h"
 /**
  * int_index - returns an integer
- * array - pointer to array of ints
- * size - size of array
- * cmp - comparison to use
+ * @array: pointer to array of ints
+ * @size: - size of array
+ * @cmp: - comparison to use
+ * Return: first index of value that matches compare
 */
 
 int int_index(int *array, int size, int (*cmp)(int))

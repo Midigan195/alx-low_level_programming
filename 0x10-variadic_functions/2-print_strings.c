@@ -2,16 +2,17 @@
 #include<stddef.h>
 #include<stdio.h>
 /**
- * print_numbers - adds all arguments together
+ * print_strings - prints each string
  * @separator: pointer to charcater separator
  * @n: number of arguments
 */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list list;
 	int i = 0;
 	int count = n;
+	char *text;
 
 	if (n == 0)
 		printf("\n");
@@ -20,7 +21,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 
 	for (i = 0; i < count; i++)
 	{
-		printf("%d", va_arg(list, int));
+		text = va_arg(list, char*);
+		if (text != NULL)
+			printf("%s", text);
+		else
+			printf("(nil)");
 		if (i < (count - 1) && separator != NULL)
 			printf("%s", separator);
 	}

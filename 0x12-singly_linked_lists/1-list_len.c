@@ -3,12 +3,12 @@
 #include<stdlib.h>
 #include"lists.h"
 /**
- * print_list - Prints a list of items
+ * list_len - Prints a list of items
  * @h: pointer to list
  * Return: number of elements in list
 */
 
-size_t print_list(const list_t *h)
+size_t list_len(const list_t *h)
 {
 	int count = 0;
 	list_t *ptr = NULL;
@@ -20,10 +20,6 @@ size_t print_list(const list_t *h)
 	while (ptr != NULL)
 	{
 		count++;
-		if (ptr->str != NULL)
-			printf("[%d] %s\n", ptr->len, ptr->str);
-		else
-			printf("[0] (nil)\n");
 		ptr = ptr->next;
 	}
 

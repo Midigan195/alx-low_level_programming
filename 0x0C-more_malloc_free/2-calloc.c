@@ -9,22 +9,21 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
-	int space = nmemb * size;
+	void *p;
 	int i = 0;
-	int el = nmemb;
 
 	if (nmemb <= 0 || size <= 0)
 		return (NULL);
-	p = malloc(space);
+	p = malloc(nmemb * size);
 	if (p == NULL)
 	{
 		free(p);
 		return (NULL);
 	}
-	while (i < el)
+	
+	while (i < (nmemb * size))
 	{
-		p[i] = 0;
+		*(char*)(p + i) = 0;
 		i++;
 	}
 	return (p);

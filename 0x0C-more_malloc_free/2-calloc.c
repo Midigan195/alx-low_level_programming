@@ -22,7 +22,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		free(p);
 		return (NULL);
 	}
-	
+
 	while (i < (space))
 	{
 		*(buff + i) = 0;

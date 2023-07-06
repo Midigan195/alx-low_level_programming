@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * binary_to_uint - Converts a binary number to unsigned int
  * @b: pointer to string of chars

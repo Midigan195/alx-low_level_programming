@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 /**
  * set_bit - Set specified bit at index
  * @n: integer to be indexed

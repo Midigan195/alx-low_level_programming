@@ -18,7 +18,7 @@ void check(int option, int id, char *file)
 	{
 		if (id == -1)
 		{
-			dprintf(2, "Error: Can't read from this thing %s\n", file);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
 			exit(98);
 		}
 	}
@@ -26,7 +26,7 @@ void check(int option, int id, char *file)
 	{
 		if (id == -1)
 		{
-			dprintf(2, "Error: Can't write to %s\n", file);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file);
 			exit(99);
 		}
 	}
@@ -45,7 +45,6 @@ int main(int ac, char **av)
 	char *buff = NULL;
 	int k = 0;
 	int j = 0;
-	size_t buff_size = 1024;
 	int n = 0;
 	int i = 0;
 
@@ -53,30 +52,29 @@ int main(int ac, char **av)
 
 	if (ac != 3)
 	{
-		dprintf(2, "Usage: cp %s %s\n", av[1], av[2]);
+		dprintf(STDERR_FILENO, "Usage: cp %s %s\n", av[1], av[2]);
 		exit(97);
 	}
-	buff = malloc(buff_size);
+	buff = malloc(3000);
 	n = open(filefrom, O_RDONLY);
 	check(1, n, filefrom);
-	k = read(n, buff, buff_size);
+	k = read(n, buff, 3000);
 	check(1, k, filefrom);
 
 	if (close(n) == -1)
 	{
-		dprintf(2, "Can't close fd %i\n", n);
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 		exit(100);
 	}
 
 	i = open(fileto, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	check(2, i, fileto);
-	j = write(i, buff, buff_size);
+	j = write(i, buff, k);
 	check(2, j, fileto);
 
 	if (close(i) == -1)
 	{
-		dprintf(2, "Can't close fd %i\n", i);
-		printf("there is an issue");
+		dprintf(STDERR_FILENO, "Error: Can't close fd\n");
 		exit(100);
 	}
 	umask(old_mask);

@@ -3,9 +3,8 @@
 #include "lists.h"
 /**
  * delete_dnodeint_at_index - delete item at specified index of list
- * @h: pointer to pointer of list
+ * @head: pointerd to pointer of list
  * @index: position where to delete from list
- * @n: value of element to delete from list
  * Return: 1 if sucessful; else return 1
  */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)

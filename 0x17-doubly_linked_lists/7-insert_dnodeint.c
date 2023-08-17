@@ -2,6 +2,31 @@
 #include <stddef.h>
 #include <stdio.h>
 #include "lists.h"
+#define FIRST do {\
+	new_node->next = *h;\
+	(*h)->prev = new_node;\
+	*h = new_node;\
+	} while (0)\
+
+
+#define MIDDLE {{\
+	new_node->next = last_node;\
+	new_node->prev = last_node->prev;\
+	last_node->prev->next = new_node;\
+	last_node->prev = new_node;\
+	}}
+
+#define LAST {{\
+	new_node->prev = last_node;\
+	last_node->next = new_node;\
+	}}
+
+#define NODE {{\
+	new_node->n = n;\
+	new_node->prev = NULL;\
+	new_node->next = NULL;\
+	}}
+
 /**
  * insert_dnodeint_at_index - add item to specified index of list
  * @h: pointer to pointer of list
@@ -21,18 +46,14 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	new_node = malloc(sizeof(dlistint_t));
 	if (new_node == NULL)
 		return (NULL);
-	new_node->n = n;
-	new_node->prev = NULL;
-	new_node->next = NULL;
+	NODE
 	if (last_node == NULL)
 	{
 		return (NULL);
 	}
 	else if (idx == 0)
 	{
-		new_node->next = *h;
-		(*h)->prev = new_node;
-		*h = new_node;
+		FIRST;
 		return (new_node);
 	}
 	else
@@ -41,16 +62,12 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		{
 			if (i == idx)
 			{
-				new_node->next = last_node;
-				new_node->prev = last_node->prev;
-				last_node->prev->next = new_node;
-				last_node->prev = new_node;
+				MIDDLE;
 				return (new_node);
 			}
 			else if (last_node->next == NULL && i == idx - 1)
 			{
-				new_node->prev = last_node;
-	                        last_node->next = new_node;
+				LAST
 				return (new_node);
 			}
 			last_node = last_node->next;

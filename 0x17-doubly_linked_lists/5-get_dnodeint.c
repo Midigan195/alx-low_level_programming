@@ -4,7 +4,7 @@
 #include "lists.h"
 /**
  * get_dnodeint_at_index - returns node at specified index
- * @h: pointer to list head
+ * @head: pointer to list head
  * @index: index of list
  * Return: value at specified element
  */
@@ -19,7 +19,7 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 	while (current != NULL)
 	{
 		if (count == index)
-			return current;
+			return (current);
 		current = current->next;
 		count++;
 	}

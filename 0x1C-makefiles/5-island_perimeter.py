@@ -10,7 +10,7 @@ def island_perimeter(grid):
     """
     perimeter = 0
 
-    if len(grid) == 0 or len(grid[0]) == 0:
+    if len(grid) == 0 or len(grid[0]) == 0 or grid:
         return perimeter
     else:
         col_len = len(grid)
